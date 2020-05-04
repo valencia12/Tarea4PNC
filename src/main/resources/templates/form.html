@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Nuevo Producto</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/superhero/bootstrap.min.css" rel="stylesheet" integrity="sha384-R/oa7KS0iDoHwdh4Gyl3/fU7pgvSCt7oyuQ79pkw+e+bMWD9dzJJa+Zqd+XJS0AD" crossorigin="anonymous">
+</head>
+<body>
+	<form class="container mt-5" method="post" th:object="${producto}" th:action="@{/validar}" >
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Codigo del producto universal</label>
+          <input th:field="*{codigo}" type="text" placeholder="Ingrese Codigo" class="form-control" name="codigo" >
+          <span th:errors="*{codigo}" style="color: #FF0000"></span>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Codigo del producto universal</label>
+            <input th:field="*{nombre}" type="text" placeholder="Ingrese nombre del producto" class="form-control" name="nombre">
+            <span th:errors="*{nombre}" style="color: #FF0000"></span>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Codigo del producto universal</label>
+            <input th:field="*{marca}" type="text" placeholder="Ingrese codigo del producto" class="form-control" id="exampleFormControlInput1" name="marca">
+            <span th:errors="*{marca}" style="color: #FF0000"></span>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">DESCRIPCION</label>
+            <input th:field="*{descripcion}" type="text" placeholder="descripcion" class="form-control" id="exampleFormControlInput1" name="descripcion">
+            <span th:errors="*{descripcion}" style="color: #FF0000"></span>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">cantidad de productos</label>
+            <input th:field="*{existencias}" type="text" placeholder="Ingrese la cantidad de productos" class="form-control" id="exampleFormControlInput1" name="existencias">
+            <span th:errors="*{existencias}" style="color: #FF0000"></span>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Fecha</label>
+            <input th:field="*{fechaIngreso}" type="text" placeholder="Fecha en formato dd/MM/yyyy" class="form-control" id="exampleFormControlInput1" name="fechaIngreso">
+            <span th:errors="*{fechaIngreso}" style="color: #FF0000"></span>
+          </div>
+          <button type="submit" class="btn btn-primary">Subir producto</button>
+          
+      </form>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
